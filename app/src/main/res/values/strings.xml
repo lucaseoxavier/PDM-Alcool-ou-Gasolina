@@ -7,4 +7,6 @@
     <string name="calculate_button">Calcular</string>
     <string name="result_title">Sua melhor escolha é</string>
     <string name="illustration_description">Ilustração de um carro</string>
+    <string name="alcohol">"Álcool"</string>
+    <string name="gas">Gasolina</string>
 </resources>
