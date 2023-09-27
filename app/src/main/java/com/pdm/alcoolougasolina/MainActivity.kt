@@ -1,11 +1,15 @@
 package com.pdm.alcoolougasolina
 
+import android.app.UiModeManager
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.SwitchCompat
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         val edGas: EditText = findViewById(R.id.edGas)
         val swPercentage: SwitchCompat = findViewById(R.id.swPercentage)
         val resultField: TextView = findViewById(R.id.resultField)
+        val imageView: ImageView = findViewById(R.id.imageView)
+
+        updateImage(applicationContext, imageView)
 
         swPercentage.setOnCheckedChangeListener  { _, isChecked ->
             updatePercentageValue(isChecked)
@@ -63,5 +70,18 @@ class MainActivity : AppCompatActivity() {
             resultField.text = applicationContext.getString(R.string.gas)
             Log.i("PDM23", "Gas is cheaper")
         }
+    }
+
+    private fun updateImage(context: Context, imageView: ImageView) {
+        if (isDarkMode(context)) {
+            imageView.setImageDrawable(AppCompatResources.getDrawable(context, R.drawable.illustration_blue))
+        } else {
+            imageView.setImageDrawable(AppCompatResources.getDrawable(context, R.drawable.illustration_yellow))
+        }
+    }
+
+    private fun isDarkMode(context: Context): Boolean {
+        val uiModeManager = context.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+        return uiModeManager.nightMode == UiModeManager.MODE_NIGHT_YES
     }
 }
