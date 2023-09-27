@@ -1,8 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.ÁlcoolOuGasolina" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:colorBackground">@color/gold_background</item>
+        <item name="colorPrimaryContainer">@color/yellow_container</item>
+        <item name="colorAccent">@color/brown_button</item>
+        <item name="android:textColor">@color/black_text</item>
+        <item name="hintTextColor">@color/grey_text_hint</item>
+
     </style>
 
     <style name="Theme.ÁlcoolOuGasolina" parent="Base.Theme.ÁlcoolOuGasolina" />

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Álcool Ou Gasolina</string>
+    <string name="alcohol_or_gas">Álcool ou Gasolina?</string>
+    <string name="alcohol_price">Preço do álcool</string>
+    <string name="gas_price">Preço da gasolina</string>
+    <string name="_70_75">70% - 75%</string>
+    <string name="calculate_button">Calcular</string>
+    <string name="result_title">Sua melhor escolha é</string>
+    <string name="illustration_description">Ilustração de um carro</string>
 </resources>

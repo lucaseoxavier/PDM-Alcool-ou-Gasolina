@@ -6,13 +6,124 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/extra_large_margin"
+        android:background="?colorPrimaryContainer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/extra_large_margin"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/extra_large_margin"
+            android:contentDescription="@string/illustration_description"
+            app:srcCompat="@drawable/illustration_yellow" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/extra_large_margin"
+            android:text="@string/alcohol_or_gas"
+            android:textColor="?android:textColor"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/regular_margin"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edAlc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/alcohol_price"
+                android:inputType="numberDecimal"
+                android:textColor="?android:textColor"
+                android:textColorHint="?hintTextColor"
+                android:paddingVertical="@dimen/medium_margin" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/medium_margin" />
+
+            <EditText
+                android:id="@+id/edGas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/gas_price"
+                android:inputType="numberDecimal"
+                android:textColor="?android:textColor"
+                android:textColorHint="?hintTextColor"
+                android:paddingVertical="@dimen/medium_margin" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/_70_75"
+                android:textColor="?android:textColor" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/extra_large_margin" />
+
+        <Button
+            android:id="@+id/btCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/extra_large_margin"
+            android:paddingVertical="@dimen/medium_margin"
+            android:backgroundTint="?colorAccent"
+            android:text="@string/calculate_button"
+            android:textColor="@color/white_text" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/extra_large_margin"
+            android:layout_marginVertical="@dimen/small_margin" />
+
+        <TextView
+            android:id="@+id/resultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/result_title"
+            android:textColor="?android:textColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/resultField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alcohol_or_gas"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/small_margin"
+                android:padding="@dimen/medium_margin"
+                android:background="?android:colorBackground"
+                android:textColor="?android:textColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
