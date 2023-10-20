@@ -27,9 +27,9 @@ class MainActivity : AppCompatActivity() {
         val edGas: EditText = findViewById(R.id.edGas)
         val swPercentage: SwitchCompat = findViewById(R.id.swPercentage)
         val resultField: TextView = findViewById(R.id.resultField)
-        val imageView: ImageView = findViewById(R.id.imageView)
+        val imageView: ImageView? = findViewById(R.id.imageView)
 
-        updateImage(applicationContext, imageView)
+        imageView?.let { updateImage(applicationContext, it) }
 
         swPercentage.setOnCheckedChangeListener  { _, isChecked ->
             updatePercentageValue(isChecked)

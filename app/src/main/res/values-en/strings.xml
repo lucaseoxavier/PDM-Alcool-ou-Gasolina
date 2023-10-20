@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alcohol or Gas?</string>
+    <string name="alcohol_or_gas">Alcohol or Gas?</string>
+    <string name="alcohol_price">Alcohol price</string>
+    <string name="gas_price">Gas price</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="result_title">Your best choice is</string>
+    <string name="illustration_description">Car illustration</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="gas">Gas</string>
+    <string name="_70_75">70% - 75%</string>
+</resources>
