@@ -38,6 +38,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="@dimen/extra_large_margin"
             android:text="@string/alcohol_or_gas"
+            android:contentDescription="@string/title_description"
             android:textColor="?android:textColor"
             android:textSize="25sp"
             android:textStyle="bold" />
